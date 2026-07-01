@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Converted md</title>
+  <style>
+    :root {
+      --c-base: #ffffff;
+      --c-main: #000000;
+      --c-soft: rgba(0, 0, 0, 0.06);
+      --c-muted: rgba(0, 0, 0, 0.66);
+    }
+    * {
+      box-sizing: border-box;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    body {
+      margin: 0;
+      background: var(--c-base);
+      color: var(--c-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17.1px;
+      line-height: 1.75;
+    }
+    main {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+      padding: clamp(20px, 4vw, 48px) clamp(16px, 7vw, 96px);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 1.55em 0 0.35em;
+      padding-bottom: 0.12em;
+      font-size: clamp(1.267rem, 4.608vw, 2.65rem);
+    }
+    h1:first-child { margin-top: 0; }
+    h2 {
+      background: var(--c-main);
+      color: var(--c-base);
+      font-size: clamp(0.972rem, 2.16vw, 1.44rem);
+      margin: 1.8em 0 0.8em;
+      padding: 0.32em 0.55em;
+    }
+    h3 {
+      font-size: 1.215rem;
+      margin: 1.5em 0 0.35em;
+    }
+    p, ul, ol, blockquote, pre, table { margin: 0 0 1.05em; }
+    ul, ol { padding-left: 1.45em; }
+    li > ul,
+    li > ol {
+      margin: 0.35em 0 0.2em;
+    }
+    h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+    h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul,
+    h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol {
+      margin-top: 0;
+    }
+    a { color: var(--c-main); font-weight: 700; text-decoration-thickness: 0.08em; }
+    a:focus-visible { outline: 3px solid var(--c-main); outline-offset: 3px; }
+    strong { font-weight: 850; }
+    code {
+      border-radius: 6px;
+      background: var(--c-soft);
+      padding: 0.1em 0.35em;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    pre {
+      overflow: auto;
+      border-radius: 8px;
+      background: #000000;
+      color: #ffffff;
+      padding: 1rem;
+    }
+    pre code {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      background: var(--c-soft);
+      padding: 0.8rem 1rem;
+      color: var(--c-main);
+    }
+    .table-wrap { overflow-x: auto; margin: 0 0 1.3em; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--c-soft);
+      font-weight: 850;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--c-main);
+      margin: 2rem 0;
+    }
+    .color-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.36rem;
+      white-space: nowrap;
+    }
+    .color-chip::before {
+      content: "";
+      width: 0.9em;
+      height: 0.9em;
+      border: 1px solid rgba(0, 0, 0, 0.24);
+      background: var(--chip-color);
+    }
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+    @media print {
+      html,
+      body {
+        background: var(--c-base);
+      }
+      h2,
+      pre,
+      blockquote,
+      th,
+      code,
+      .color-chip::before {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+<h1 id="財務-会計-問題バンク">財務・会計 問題バンク</h1>
+<h2 id="バッチ3-ファイナンス計算-l1-l2-回答方法の定着版-21問">バッチ3：ファイナンス計算（L1–L2／回答方法の定着版・21問）</h2>
+<blockquote>各論点は <strong>解き方の型（なぜ→手順→罠)</strong> → <strong>L1（素直)</strong> → <strong>L2（罠込み)</strong> の順。</blockquote>
+<blockquote>解説は毎回この手順を同じ順序でなぞります。手順を覚えるための反復が目的です。各問4点。</blockquote>
+<hr>
+<h2 id="1-税引後キャッシュフロー-頻度a">1. 税引後キャッシュフロー 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：投資の値打ちは「現金」で測る。だが税金は利益に課される。減価償却は現金が出ていかないのに利益を減らす＝税金を減らす（節税)。だから現金ベースに直すと、本体の税引後に「減価の節税分」を足し戻すことになる。
+</li>
+<li><strong>手順</strong>：①（必要なら）減価償却費を出す　②次のどちらかで計算
+<ul>
+<li>与えられたのが<strong>減価償却前の税引前CF（現金収支)</strong>なら → <code>税引後CF＝税引前CF×(1−t)＋減価×t</code>
+</li>
+<li>与えられたのが<strong>税引前利益（減価控除後)</strong>なら → <code>税引後CF＝利益×(1−t)＋減価</code>
+</li>
+<li>※この2式は同じもの（利益＝CF−減価を代入すると一致する)
+</li>
+</ul>
+</li>
+<li><strong>罠</strong>：問題文のCFが「減価償却前」か「後（利益)」かを必ず読む。ここを取り違えると全部ずれる。
+</li>
+</ul>
+<h3 id="問1-l1">問1 [L1]</h3>
+<p>減価償却前の税引前キャッシュフロー（現金収支）が年2,500万円、減価償却費900万円、実効税率30%。年間の税引後キャッシュフローは。</p>
+<ul>
+<li>ア　1,750万円
+</li>
+<li>イ　2,020万円
+</li>
+<li>ウ　2,230万円
+</li>
+<li>エ　2,500万円
+</li>
+</ul>
+<h3 id="問2-l2">問2 [L2]</h3>
+<p>ある投資で年間の「税引前利益」が600万円である。この利益は減価償却費300万円を控除した後の金額である。実効税率30%のとき、年間の税引後キャッシュフローは。</p>
+<ul>
+<li>ア　420万円
+</li>
+<li>イ　600万円
+</li>
+<li>ウ　720万円
+</li>
+<li>エ　900万円
+</li>
+</ul>
+<h3 id="問3-l2">問3 [L2]</h3>
+<p>初期投資3,000万円、耐用年数5年・残存価額ゼロ・定額法。この設備で年間の売上から現金費用を引いた額（減価償却前の税引前現金収支）が1,200万円。実効税率30%のとき、年間の税引後キャッシュフローは。</p>
+<ul>
+<li>ア　840万円
+</li>
+<li>イ　1,020万円
+</li>
+<li>ウ　1,200万円
+</li>
+<li>エ　1,260万円
+</li>
+</ul>
+<hr>
+<h2 id="2-正味現在価値-npv-頻度a">2. 正味現在価値（NPV) 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：将来の現金は今の現金より価値が低い（割引)。各期のCFを「今の価値」に直して合計し、初期投資を引く。プラスなら価値を生む投資。
+</li>
+<li><strong>手順</strong>：①各期の（税引後)CFを確定　②現在価値に直す（<strong>毎期バラバラ→各期に複利現価係数／毎期一定→年金現価係数を一発で掛ける</strong>)　③合計−初期投資＝NPV
+</li>
+<li><strong>罠</strong>：(1)毎期一定なら年金現価係数（個別に複利現価を足さない)。(2)最終年の<strong>残存価額の売却収入</strong>は別枠で足す（複利現価で割引)。(3)初期投資は第0期なので割り引かない。(4)NPVは平気でマイナスになる──プラス前提で選ばない。
+</li>
+</ul>
+<h3 id="問4-l1">問4 [L1]</h3>
+<p>初期投資1,000万円、第1期末CF 600万円、第2期末CF 700万円、資本コスト5%。複利現価係数は1年0.95、2年0.91。NPVは。</p>
+<ul>
+<li>ア　207万円
+</li>
+<li>イ　300万円
+</li>
+<li>ウ　−93万円
+</li>
+<li>エ　570万円
+</li>
+</ul>
+<h3 id="問5-l1">問5 [L1]</h3>
+<p>初期投資2,000万円、毎年末600万円のCFが5年間続く。資本コスト6%、5年の年金現価係数4.21。NPVは。</p>
+<ul>
+<li>ア　526万円
+</li>
+<li>イ　600万円
+</li>
+<li>ウ　1,526万円
+</li>
+<li>エ　2,526万円
+</li>
+</ul>
+<h3 id="問6-l2">問6 [L2]</h3>
+<p>初期投資5,000万円、毎年の税引後CFは1,300万円（5年間)。さらに5年目末に設備を残存価額500万円で売却できる（売却損益は生じない)。資本コスト5%、複利現価係数5年0.78、年金現価係数5年4.33。NPVは。</p>
+<ul>
+<li>ア　629万円
+</li>
+<li>イ　1,019万円
+</li>
+<li>ウ　1,409万円
+</li>
+<li>エ　5,629万円
+</li>
+</ul>
+<h3 id="問7-l2">問7 [L2]</h3>
+<p>初期投資2,000万円、第1期末CF 1,200万円、第2期末CF 900万円、資本コスト8%。複利現価係数は1年0.93、2年0.86。NPVは。</p>
+<ul>
+<li>ア　−110万円
+</li>
+<li>イ　100万円
+</li>
+<li>ウ　1,890万円
+</li>
+<li>エ　−2,000万円
+</li>
+</ul>
+<hr>
+<h2 id="3-投資判定-irr-回収期間-収益性指数-頻度a">3. 投資判定（IRR・回収期間・収益性指数) 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：NPV以外にも採否の物差しがある。それぞれ何を見ているかと判定基準を押さえる。
+</li>
+<li><strong>基準</strong>：
+<ul>
+<li><strong>IRR</strong>＝NPVがゼロになる割引率。<code>IRR ＞ 資本コスト → 採択</code>。<strong>永続CFなら IRR＝CF÷初期投資</strong> で即出る。
+</li>
+<li><strong>NPV判定</strong>：<code>NPV ＞ 0 → 採択</code>。単独案ではIRR判定とNPV判定は必ず一致（IRR＞r ⟺ NPV＞0)。
+</li>
+<li><strong>収益性指数(PI)</strong>＝CF現在価値合計÷初期投資。<code>PI ＞ 1 → 採択</code>。
+</li>
+</ul>
+</li>
+<li><strong>罠</strong>：<strong>相互排他的</strong>な案ではNPVとIRR・PIが食い違うことがある（投資規模が違うため)。そのときは<strong>企業価値最大化のNPVを優先</strong>。
+</li>
+</ul>
+<h3 id="問8-l1">問8 [L1]</h3>
+<p>初期投資1,200万円、当期以降永続的に毎期末120万円のCFが得られる。資本コスト8%のとき、内部収益率（IRR）と採否は。</p>
+<ul>
+<li>ア　IRR 8%・棄却
+</li>
+<li>イ　IRR 10%・採択
+</li>
+<li>ウ　IRR 12%・採択
+</li>
+<li>エ　IRR 10%・棄却
+</li>
+</ul>
+<h3 id="問9-l1">問9 [L1]</h3>
+<p>初期投資4,000万円、将来CFの現在価値合計4,800万円。収益性指数（PI）と採否は。</p>
+<ul>
+<li>ア　PI 0.83・棄却
+</li>
+<li>イ　PI 1.2・採択
+</li>
+<li>ウ　PI 1.2・棄却
+</li>
+<li>エ　PI 0.83・採択
+</li>
+</ul>
+<h3 id="問10-l2">問10 [L2]</h3>
+<p>相互排他的な投資案A・B。A＝初期投資3,000万円・CF現在価値合計3,900万円。B＝初期投資5,000万円・CF現在価値合計6,200万円。NPV法と収益性指数法でそれぞれ採択される案は。</p>
+<ul>
+<li>ア　NPV法：A／PI法：B
+</li>
+<li>イ　NPV法：B／PI法：A
+</li>
+<li>ウ　NPV法：B／PI法：B
+</li>
+<li>エ　NPV法：A／PI法：A
+</li>
+</ul>
+<h3 id="問11-l2">問11 [L2]</h3>
+<p>初期投資1,000万円、当期以降永続的に毎期末70万円のCF。資本コスト10%のとき、内部収益率法と正味現在価値法による採否の組み合わせは。</p>
+<ul>
+<li>ア　両方採択
+</li>
+<li>イ　IRR採択・NPV棄却
+</li>
+<li>ウ　IRR棄却・NPV採択
+</li>
+<li>エ　両方棄却
+</li>
+</ul>
+<hr>
+<h2 id="4-加重平均資本コスト-wacc-頻度a">4. 加重平均資本コスト（WACC) 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：企業は負債と自己資本の両方で調達し、それぞれコストが違う。だから調達割合で加重平均する。負債利子は損金になり節税が効くので、負債コストは実質 (1−t) 倍。
+</li>
+<li><strong>手順</strong>：①負債と自己資本の<strong>時価ウェイト</strong>を出す　②<code>WACC＝自己資本ウェイト×自己資本コスト＋負債ウェイト×負債コスト×(1−t)</code>
+</li>
+<li><strong>罠</strong>：(1)<strong>「負債比率(D/E)」で与えられたらウェイトに変換</strong>。D/E＝0.25 は「負債:自己資本＝1:4」なので、ウェイトは0.2と0.8（0.25ではない)。最頻出の罠。(2)負債コストに <strong>(1−t)</strong> を掛け忘れない。
+</li>
+</ul>
+<h3 id="問12-l1">問12 [L1]</h3>
+<p>負債（時価)3,000万円、自己資本（時価)7,000万円。自己資本コスト10%、税引前負債コスト4%、実効税率30%。WACCは。</p>
+<ul>
+<li>ア　7.0%
+</li>
+<li>イ　7.84%
+</li>
+<li>ウ　8.2%
+</li>
+<li>エ　10.0%
+</li>
+</ul>
+<h3 id="問13-l2">問13 [L2]</h3>
+<p>負債比率（負債÷自己資本)が1.0、自己資本コスト14%、税引前負債コスト5%、実効税率30%。WACCは。</p>
+<ul>
+<li>ア　6.75%
+</li>
+<li>イ　8.75%
+</li>
+<li>ウ　9.5%
+</li>
+<li>エ　14.0%
+</li>
+</ul>
+<h3 id="問14-l2">問14 [L2]</h3>
+<p>負債（時価)4,000万円、自己資本（時価)6,000万円、自己資本コスト10%、税引前負債コスト5%、実効税率40%。WACCは。</p>
+<ul>
+<li>ア　6.0%
+</li>
+<li>イ　7.2%
+</li>
+<li>ウ　8.0%
+</li>
+<li>エ　8.6%
+</li>
+</ul>
+<hr>
+<h2 id="5-配当割引モデル-頻度a">5. 配当割引モデル 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：株式の価値＝将来もらえる配当の現在価値の合計。
+</li>
+<li><strong>2つの型</strong>：
+<ul>
+<li><strong>定額（成長なし)</strong>：<code>P＝D÷r</code>（同額が永久に続く＝無限等比級数の和)
+</li>
+<li><strong>定率成長（ゴードン)</strong>：<code>P₀＝D₁÷(r−g)</code>　<strong>D₁は「来期(1期後)」の配当</strong>
+</li>
+</ul>
+</li>
+<li><strong>手順</strong>：①配当が一定か成長かを判定　②一定なら D÷r／成長なら 来期配当÷(r−g)
+</li>
+<li><strong>罠</strong>：(1)ゴードンの分子は<strong>来期配当D₁</strong>。当期配当D₀が与えられたら <code>D₁＝D₀×(1+g)</code> に直す。(2)分母は r−g（引き算の順序)。(3)最初の数年だけ高成長の<strong>多段階</strong>は、高成長期を個別に割り引き、安定期はゴードンでまとめてから現在へ割り引く。
+</li>
+</ul>
+<h3 id="問15-l1">問15 [L1]</h3>
+<p>毎期一定の配当6円を永久に支払う株式。要求収益率10%。理論株価は。</p>
+<ul>
+<li>ア　40円
+</li>
+<li>イ　60円
+</li>
+<li>ウ　66円
+</li>
+<li>エ　100円
+</li>
+</ul>
+<h3 id="問16-l1">問16 [L1]</h3>
+<p>来期（1期後）の予想配当が4円、以降の配当成長率は毎期2%で一定。自己資本コスト8%。理論株価は。</p>
+<ul>
+<li>ア　50円
+</li>
+<li>イ　66.67円
+</li>
+<li>ウ　80円
+</li>
+<li>エ　100円
+</li>
+</ul>
+<h3 id="問17-l2">問17 [L2]</h3>
+<p>当期（直前）の配当が5円、今後は毎期3%で成長する見込み。自己資本コスト8%。理論株価は。</p>
+<ul>
+<li>ア　100円
+</li>
+<li>イ　103円
+</li>
+<li>ウ　160円
+</li>
+<li>エ　166.67円
+</li>
+</ul>
+<h3 id="問18-l2">問18 [L2]</h3>
+<p>次期（第1期末）の予想配当は30円。第1期末から第2期末までの1年間の配当成長率は10%、それ以降は毎期2%で一定。自己資本コスト10%。当期末（第0期末）時点の理論株価は（小数第1位四捨五入)。</p>
+<ul>
+<li>ア　375円
+</li>
+<li>イ　402円
+</li>
+<li>ウ　442円
+</li>
+<li>エ　454円
+</li>
+</ul>
+<hr>
+<h2 id="6-サステナブル成長率-頻度a">6. サステナブル成長率 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：外部から調達せず、内部留保だけを再投資したときに自己資本（と利益）が伸びる率。利益のうち再投資した分（内部留保）がROEで回って増えていく。
+</li>
+<li><strong>式</strong>：<code>g＝ROE×内部留保率＝ROE×(1−配当性向)</code>
+</li>
+<li><strong>手順</strong>：①内部留保率を出す（＝1−配当性向、または内部留保額÷利益)　②ROEを掛ける
+</li>
+<li><strong>罠</strong>：(1)<strong>配当性向と内部留保率を取り違えない</strong>（足して1になる)。(2)実数（利益・配当・自己資本）で与えられたら、内部留保額＝利益−配当 として <code>g＝内部留保額÷自己資本</code> でも同じ値が出る。
+</li>
+</ul>
+<h3 id="問19-l1">問19 [L1]</h3>
+<p>ROE 10%、配当性向30%（いずれも毎期一定)。サステナブル成長率は。</p>
+<ul>
+<li>ア　3%
+</li>
+<li>イ　7%
+</li>
+<li>ウ　10%
+</li>
+<li>エ　13%
+</li>
+</ul>
+<h3 id="問20-l2">問20 [L2]</h3>
+<p>当期純利益300万円、期首自己資本2,000万円、配当120万円。サステナブル成長率は。</p>
+<ul>
+<li>ア　6%
+</li>
+<li>イ　9%
+</li>
+<li>ウ　12%
+</li>
+<li>エ　15%
+</li>
+</ul>
+<h3 id="問21-l2">問21 [L2]</h3>
+<p>ROE 8%、内部留保率40%（いずれも毎期一定)。サステナブル成長率は。</p>
+<ul>
+<li>ア　3.2%
+</li>
+<li>イ　4.8%
+</li>
+<li>ウ　8.0%
+</li>
+<li>エ　12.0%
+</li>
+</ul>
+<hr>
+<h1 id="解答-解説-手順をなぞる">解答・解説（手順をなぞる）</h1>
+<h2 id="1-税引後cf">1. 税引後CF</h2>
+<p><strong>問1：イ</strong>　CFは減価償却前。①減価は所与900。②<code>税引前CF×(1−t)＋減価×t</code>＝2,500×0.7＋900×0.3＝1,750＋270＝<strong>2,020</strong>。</p>
+<p><strong>問2：ウ</strong>　与えられたのは利益（減価控除後)。②<code>利益×(1−t)＋減価</code>＝600×0.7＋300＝420＋300＝<strong>720</strong>。税引後利益420で止めると誤り──減価を足し戻す。</p>
+<p><strong>問3：イ</strong>　①減価＝3,000÷5＝600。②CFは減価償却前なので<code>1,200×0.7＋600×0.3</code>＝840＋180＝<strong>1,020</strong>。</p>
+<h2 id="2-npv">2. NPV</h2>
+<p><strong>問4：ア</strong>　①CF確定。②毎期バラバラ→各期に複利現価。③<code>−1,000＋600×0.95＋700×0.91</code>＝−1,000＋570＋637＝<strong>207</strong>。</p>
+<p><strong>問5：ア</strong>　毎期一定→年金現価係数を一発掛け。<code>−2,000＋600×4.21</code>＝−2,000＋2,526＝<strong>526</strong>。</p>
+<p><strong>問6：イ</strong>　本体（毎期一定）＝1,300×4.33＝5,629。残存売却は最終年の単発なので<strong>複利現価</strong>で割引＝500×0.78＝390。<code>−5,000＋5,629＋390</code>＝<strong>1,019</strong>。残存を足し忘れると629（ア)。</p>
+<p><strong>問7：ア</strong>　CFが毎期違う→個別に複利現価。<code>−2,000＋1,200×0.93＋900×0.86</code>＝−2,000＋1,116＋774＝<strong>−110</strong>。マイナスもありうる。</p>
+<h2 id="3-投資判定">3. 投資判定</h2>
+<p><strong>問8：イ</strong>　永続CFのIRR＝CF÷初期投資＝120÷1,200＝<strong>10%</strong>。10%＞8%→<strong>採択</strong>。</p>
+<p><strong>問9：イ</strong>　PI＝現在価値合計÷初期投資＝4,800÷4,000＝<strong>1.2</strong>。1.2＞1→<strong>採択</strong>。</p>
+<p><strong>問10：イ</strong>　A：NPV＝3,900−3,000＝900、PI＝3,900÷3,000＝1.30。B：NPV＝6,200−5,000＝1,200、PI＝6,200÷5,000＝1.24。NPVが大きいのは<strong>B</strong>、PIが大きいのは<strong>A</strong>。相互排他なので食い違う＝典型論点。</p>
+<p><strong>問11：エ</strong>　IRR＝70÷1,000＝7%＜10%→棄却。NPV＝70÷0.10−1,000＝700−1,000＝−300＜0→棄却。<strong>両方棄却</strong>。</p>
+<h2 id="4-wacc">4. WACC</h2>
+<p><strong>問12：イ</strong>　①ウェイトは3,000:7,000＝0.3:0.7。②<code>0.7×10＋0.3×4×0.7</code>＝7＋0.84＝<strong>7.84%</strong>。</p>
+<p><strong>問13：イ</strong>　①D/E＝1.0は「1:1」→ウェイト0.5・0.5（1.0ではない)。②<code>0.5×14＋0.5×5×0.7</code>＝7＋1.75＝<strong>8.75%</strong>。</p>
+<p><strong>問14：イ</strong>　①ウェイト0.4:0.6。②<code>0.6×10＋0.4×5×0.6</code>＝6＋1.2＝<strong>7.2%</strong>。(1−t)を忘れると0.6×10＋0.4×5＝8.0（ウ）になる罠。</p>
+<h2 id="5-配当割引モデル">5. 配当割引モデル</h2>
+<p><strong>問15：イ</strong>　定額型。<code>D÷r</code>＝6÷0.10＝<strong>60円</strong>。</p>
+<p><strong>問16：イ</strong>　定率型でD₁が所与。<code>D₁÷(r−g)</code>＝4÷(0.08−0.02)＝4÷0.06＝<strong>66.67円</strong>。</p>
+<p><strong>問17：イ</strong>　定率型だが当期配当D₀が所与。まず<code>D₁＝5×1.03＝5.15</code>。<code>5.15÷(0.08−0.03)</code>＝5.15÷0.05＝<strong>103円</strong>。D₀のまま5÷0.05＝100（ア）とすると誤り。</p>
+<p><strong>問18：イ</strong>　多段階。D₁＝30、D₂＝30×1.10＝33。第2期末以降は2%成長なので、<strong>第1期末</strong>時点のゴードン価値＝D₂÷(r−g)＝33÷(0.10−0.02)＝33÷0.08＝412.5（D₂以降をすべて含む)。これを現在へ：P₀＝(D₁＋412.5)÷1.10＝(30＋412.5)÷1.10＝442.5÷1.10≒<strong>402円</strong>。割引を忘れると442（ウ)。</p>
+<h2 id="6-サステナブル成長率">6. サステナブル成長率</h2>
+<p><strong>問19：イ</strong>　①内部留保率＝1−0.3＝0.7。②<code>ROE×内部留保率</code>＝10%×0.7＝<strong>7%</strong>。</p>
+<p><strong>問20：イ</strong>　実数型。内部留保額＝300−120＝180。<code>内部留保額÷自己資本</code>＝180÷2,000＝<strong>9%</strong>。（検算：ROE＝300÷2,000＝15%、内部留保率＝180÷300＝0.6、15%×0.6＝9%)</p>
+<p><strong>問21：ア</strong>　内部留保率が直接40%と所与。<code>ROE×内部留保率</code>＝8%×0.4＝<strong>3.2%</strong>。40%を配当性向と勘違いして8%×0.6＝4.8%（イ）とするのが罠。</p>
+<hr>
+<h2 id="正解一覧">正解一覧</h2>
+<div class="table-wrap"><table><thead><tr><th>論点</th><th>問</th><th>解答</th></tr></thead><tbody><tr><td>税引後CF</td><td>1–3</td><td>イ・ウ・イ</td></tr><tr><td>NPV</td><td>4–7</td><td>ア・ア・イ・ア</td></tr><tr><td>投資判定</td><td>8–11</td><td>イ・イ・イ・エ</td></tr><tr><td>WACC</td><td>12–14</td><td>イ・イ・イ</td></tr><tr><td>配当割引</td><td>15–18</td><td>イ・イ・イ・イ</td></tr><tr><td>サステナブル成長率</td><td>19–21</td><td>イ・イ・ア</td></tr></tbody></table></div>
+<hr>
+<h2 id="使い方-定着のコツ">使い方（定着のコツ）</h2>
+<ol>
+<li><strong>先に「解き方の型」だけ読む</strong> → 手順を声に出して言えるか確認。
+</li>
+<li>問題を解くとき、<strong>型の手順番号を指でなぞりながら</strong>進める（①ウェイト→②加重平均、のように)。
+</li>
+<li>間違えたら答えでなく<strong>「どの手順で外したか」</strong>を特定する（計算ミスか、罠にかかったか)。
+</li>
+<li>2周目は<strong>L2だけ</strong>を解く（罠への耐性が本番の得点差)。
+</li>
+<li>数字を変えても手が勝手に動くようになれば、この論点は「身に付いた」状態。
+</li>
+</ol>
+  </main>
+</body>
+</html>

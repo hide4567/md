@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Converted md</title>
+  <style>
+    :root {
+      --c-base: #ffffff;
+      --c-main: #000000;
+      --c-soft: rgba(0, 0, 0, 0.06);
+      --c-muted: rgba(0, 0, 0, 0.66);
+    }
+    * {
+      box-sizing: border-box;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    body {
+      margin: 0;
+      background: var(--c-base);
+      color: var(--c-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17.1px;
+      line-height: 1.75;
+    }
+    main {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+      padding: clamp(20px, 4vw, 48px) clamp(16px, 7vw, 96px);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 1.55em 0 0.35em;
+      padding-bottom: 0.12em;
+      font-size: clamp(1.267rem, 4.608vw, 2.65rem);
+    }
+    h1:first-child { margin-top: 0; }
+    h2 {
+      background: var(--c-main);
+      color: var(--c-base);
+      font-size: clamp(0.972rem, 2.16vw, 1.44rem);
+      margin: 1.8em 0 0.8em;
+      padding: 0.32em 0.55em;
+    }
+    h3 {
+      font-size: 1.215rem;
+      margin: 1.5em 0 0.35em;
+    }
+    p, ul, ol, blockquote, pre, table { margin: 0 0 1.05em; }
+    ul, ol { padding-left: 1.45em; }
+    li > ul,
+    li > ol {
+      margin: 0.35em 0 0.2em;
+    }
+    h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+    h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul,
+    h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol {
+      margin-top: 0;
+    }
+    a { color: var(--c-main); font-weight: 700; text-decoration-thickness: 0.08em; }
+    a:focus-visible { outline: 3px solid var(--c-main); outline-offset: 3px; }
+    strong { font-weight: 850; }
+    code {
+      border-radius: 6px;
+      background: var(--c-soft);
+      padding: 0.1em 0.35em;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    pre {
+      overflow: auto;
+      border-radius: 8px;
+      background: #000000;
+      color: #ffffff;
+      padding: 1rem;
+    }
+    pre code {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      background: var(--c-soft);
+      padding: 0.8rem 1rem;
+      color: var(--c-main);
+    }
+    .table-wrap { overflow-x: auto; margin: 0 0 1.3em; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--c-soft);
+      font-weight: 850;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--c-main);
+      margin: 2rem 0;
+    }
+    .color-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.36rem;
+      white-space: nowrap;
+    }
+    .color-chip::before {
+      content: "";
+      width: 0.9em;
+      height: 0.9em;
+      border: 1px solid rgba(0, 0, 0, 0.24);
+      background: var(--chip-color);
+    }
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+    @media print {
+      html,
+      body {
+        background: var(--c-base);
+      }
+      h2,
+      pre,
+      blockquote,
+      th,
+      code,
+      .color-chip::before {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+<h1 id="財務-会計-問題バンク">財務・会計 問題バンク</h1>
+<h2 id="バッチ8-fcf計算ドリル-l1-l2-cf間接法-企業価値-30問">バッチ8：FCF計算ドリル（L1–L2／CF間接法＋企業価値・30問）</h2>
+<blockquote>CF間接法・FCF・DCFは<strong>1つの共通部品</strong>で解ける。各論点は <strong>解き方の型</strong> → <strong>L1</strong> → <strong>L2</strong> の順。解説は手順をなぞる。各問4点。</blockquote>
+<blockquote>※企業価値の追補（DCF株主価値・継続価値・PER/PBR)も本バッチに統合。</blockquote>
+<hr>
+<h2 id="1-間接法の調整-個別ルール-頻度a">1. 間接法の調整（個別ルール) 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：当期純利益は発生主義で計算されている。これを現金主義（CF)に戻すのが間接法。現金が動いていない費用・収益と、運転資本の増減を足し引きする。
+</li>
+<li><strong>手順（調整の方向)</strong>：基本則は <strong>資産の増加→減算／負債の増加→加算</strong>。
+<ul>
+<li>減価償却費（現金支出なし)→<strong>加算(＋)</strong>
+</li>
+<li>売上債権の増加（資産↑＝未回収)→<strong>減算(−)</strong>　／減少→加算
+</li>
+<li>棚卸資産の増加（資産↑)→<strong>減算(−)</strong>　／減少→加算
+</li>
+<li>仕入債務の増加（負債↑＝支払先送り)→<strong>加算(＋)</strong>　／減少→減算
+</li>
+</ul>
+</li>
+<li><strong>罠</strong>：減価償却は必ず加算。売上債権・棚卸（資産)の増加はマイナス、仕入債務（負債)の増加はプラス。
+</li>
+</ul>
+<h3 id="問1-l1">問1 [L1]</h3>
+<p>当期純利益500万円、減価償却費200万円のみを考慮する（他の調整項目はない)。間接法による営業CFは。</p>
+<ul>
+<li>ア　700万円
+</li>
+<li>イ　500万円
+</li>
+<li>ウ　900万円
+</li>
+<li>エ　300万円
+</li>
+</ul>
+<h3 id="問2-l1">問2 [L1]</h3>
+<p>当期純利益500万円、当期に売上債権が80万円増加した（他の調整なし)。間接法による営業CFは。</p>
+<ul>
+<li>ア　580万円
+</li>
+<li>イ　420万円
+</li>
+<li>ウ　500万円
+</li>
+<li>エ　80万円
+</li>
+</ul>
+<h3 id="問3-l1">問3 [L1]</h3>
+<p>当期純利益500万円、当期に仕入債務が60万円増加した（他の調整なし)。間接法による営業CFは。</p>
+<ul>
+<li>ア　440万円
+</li>
+<li>イ　500万円
+</li>
+<li>ウ　560万円
+</li>
+<li>エ　60万円
+</li>
+</ul>
+<h3 id="問4-l1">問4 [L1]</h3>
+<p>当期純利益500万円、当期に棚卸資産が50万円減少した（他の調整なし)。間接法による営業CFは。</p>
+<ul>
+<li>ア　450万円
+</li>
+<li>イ　500万円
+</li>
+<li>ウ　50万円
+</li>
+<li>エ　550万円
+</li>
+</ul>
+<h3 id="問5-l2">問5 [L2]</h3>
+<p>当期純利益600万円、減価償却費150万円、売上債権増加90万円、棚卸資産増加40万円、仕入債務増加70万円。間接法による営業CFは。</p>
+<ul>
+<li>ア　610万円
+</li>
+<li>イ　690万円
+</li>
+<li>ウ　770万円
+</li>
+<li>エ　530万円
+</li>
+</ul>
+<h3 id="問6-l2">問6 [L2]</h3>
+<p>間接法による営業CFの増加要因（加算項目）となるものはどれか。</p>
+<ul>
+<li>ア　売上債権の増加
+</li>
+<li>イ　棚卸資産の増加
+</li>
+<li>ウ　仕入債務の増加
+</li>
+<li>エ　減価償却費の減少
+</li>
+</ul>
+<hr>
+<h2 id="2-営業cfの通し計算-pl-bs-頻度a">2. 営業CFの通し計算（PL＋BS) 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：実際の問題はPLとBSから営業CFを完成させる。間接法の手順を当期純利益から始め、BSの2期比較で運転資本の増減を拾う。
+</li>
+<li><strong>手順</strong>：①当期純利益（出発点)　②減価償却費を加算　③BS2期比較：売上債権・棚卸の増加を減算（減少は加算)、仕入債務の増加を加算（減少は減算)
+</li>
+<li><strong>罠</strong>：BSの増減方向を正確に。FCFが必要なら最後に<strong>設備投資を引く（FCF＝営業CF−設備投資)</strong>。
+</li>
+</ul>
+<h3 id="問7-l1">問7 [L1]</h3>
+<p>当期純利益200、減価償却費40。売上債権60→52、棚卸資産45→50、仕入債務30→37。間接法による営業CFは。</p>
+<ul>
+<li>ア　250
+</li>
+<li>イ　236
+</li>
+<li>ウ　258
+</li>
+<li>エ　200
+</li>
+</ul>
+<h3 id="問8-l2">問8 [L2]</h3>
+<p>当期純利益300、減価償却費80。売上債権40→55、棚卸資産70→60、仕入債務50→44。間接法による営業CFは。</p>
+<ul>
+<li>ア　351
+</li>
+<li>イ　369
+</li>
+<li>ウ　385
+</li>
+<li>エ　300
+</li>
+</ul>
+<h3 id="問9-l1">問9 [L1]</h3>
+<p>当期純利益160、減価償却費50。売上債権が20増加、棚卸資産が10増加、仕入債務が15増加。間接法による営業CFは。</p>
+<ul>
+<li>ア　185
+</li>
+<li>イ　195
+</li>
+<li>ウ　205
+</li>
+<li>エ　160
+</li>
+</ul>
+<h3 id="問10-l2">問10 [L2]</h3>
+<p>当期純利益250、減価償却費70、売上債権増30、棚卸資産増20、仕入債務増40。さらに当期に設備投資150を行った。フリーキャッシュフロー（FCF＝営業CF−設備投資)は。</p>
+<ul>
+<li>ア　110
+</li>
+<li>イ　310
+</li>
+<li>ウ　160
+</li>
+<li>エ　460
+</li>
+</ul>
+<hr>
+<h2 id="3-fcfの計算-公式-頻度a">3. FCFの計算（公式) 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：企業価値評価で使うFCFは「企業が自由に使える現金」。営業で稼いだ現金から、事業維持に必要な投資を引いた残り。
+</li>
+<li><strong>公式（簡易形)</strong>：<strong>FCF＝税引後利益＋減価償却費−設備投資−運転資本増加額</strong>
+<ul>
+<li>運転資本＝売上債権＋棚卸資産−仕入債務。よって<strong>運転資本増加額＝Δ売上債権＋Δ棚卸−Δ仕入債務</strong>。
+</li>
+<li>営業利益が出発点なら <strong>FCF＝営業利益×(1−税率)＋減価償却−設備投資−運転資本増加</strong>
+</li>
+</ul>
+</li>
+<li><strong>罠</strong>：(1)減価償却は足す、設備投資・運転資本増加は引く。(2)<strong>仕入債務の増加は運転資本を減らす＝FCFにプラス方向</strong>。(3)営業利益スタートなら税引後にする。
+</li>
+</ul>
+<h3 id="問11-l1">問11 [L1]</h3>
+<p>税引後純利益800、減価償却費250、設備投資400、正味運転資本増加額50。FCFは。</p>
+<ul>
+<li>ア　600
+</li>
+<li>イ　500
+</li>
+<li>ウ　700
+</li>
+<li>エ　900
+</li>
+</ul>
+<h3 id="問12-l1">問12 [L1]</h3>
+<p>営業利益500、実効税率30%、減価償却費200、設備投資300、運転資本増加額50。FCFは。</p>
+<ul>
+<li>ア　150
+</li>
+<li>イ　200
+</li>
+<li>ウ　250
+</li>
+<li>エ　350
+</li>
+</ul>
+<h3 id="問13-l2">問13 [L2]</h3>
+<p>税引後利益400、減価償却費120。当期に売上債権が60増加、棚卸資産が40増加、仕入債務が30増加した。設備投資は100。FCFは。</p>
+<ul>
+<li>ア　350
+</li>
+<li>イ　330
+</li>
+<li>ウ　370
+</li>
+<li>エ　450
+</li>
+</ul>
+<h3 id="問14-l2">問14 [L2]</h3>
+<p>税引後利益600、減価償却費150。売上債権が50増加、棚卸資産が30減少、仕入債務が20減少した。設備投資は200。FCFは。</p>
+<ul>
+<li>ア　470
+</li>
+<li>イ　510
+</li>
+<li>ウ　550
+</li>
+<li>エ　670
+</li>
+</ul>
+<h3 id="問15-l2">問15 [L2]</h3>
+<p>営業利益600、実効税率30%、減価償却費180、設備投資250。売上債権が40増加、棚卸資産が20増加、仕入債務が30増加した。FCFは。</p>
+<ul>
+<li>ア　320
+</li>
+<li>イ　300
+</li>
+<li>ウ　340
+</li>
+<li>エ　420
+</li>
+</ul>
+<h3 id="問16-l2">問16 [L2]</h3>
+<p>他の条件を一定とするとき、FCFを増加させる要因として最も適切なものはどれか。</p>
+<ul>
+<li>ア　設備投資の増加
+</li>
+<li>イ　売上債権の増加
+</li>
+<li>ウ　仕入債務の増加
+</li>
+<li>エ　減価償却費の減少
+</li>
+</ul>
+<hr>
+<h2 id="4-cf増減-区分の判断-頻度a">4. CF増減・区分の判断 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：取引がCF（営業/投資/財務）や財務指標にどう波及するかを判断する。「現金が入るか出るか」「どの活動か」で考える。
+</li>
+<li><strong>手順</strong>：現金が増える＝売上債権の回収・借入・資産売却・仕入債務の増加。現金が減る＝棚卸の積み増し・設備投資・借入返済・売上債権の増加。区分は営業（本業)・投資（資産の取得売却)・財務（借入返済・増資配当)。
+</li>
+<li><strong>罠</strong>：資産売却収入は<strong>投資</strong>、借入・返済は<strong>財務</strong>、支払配当金は<strong>財務</strong>。固定資産を売って借入返済すれば投資CF増・財務CF減（別区分なので相殺されない)。
+</li>
+</ul>
+<h3 id="問17-l1">問17 [L1]</h3>
+<p>キャッシュフローが増加する原因として、最も適切なものはどれか。</p>
+<ul>
+<li>ア　売掛金の減少
+</li>
+<li>イ　仕入債務の減少
+</li>
+<li>ウ　棚卸資産の増加
+</li>
+<li>エ　長期借入金の減少
+</li>
+</ul>
+<h3 id="問18-l1">問18 [L1]</h3>
+<p>有形固定資産の売却による収入は、キャッシュフロー計算書のどの区分に表示されるか。</p>
+<ul>
+<li>ア　営業活動
+</li>
+<li>イ　投資活動
+</li>
+<li>ウ　財務活動
+</li>
+<li>エ　表示しない
+</li>
+</ul>
+<h3 id="問19-l1">問19 [L1]</h3>
+<p>キャッシュフロー計算書において、支払配当金が表示される区分として、最も適切なものはどれか。</p>
+<ul>
+<li>ア　営業活動のみ
+</li>
+<li>イ　投資活動のみ
+</li>
+<li>ウ　表示しない
+</li>
+<li>エ　財務活動
+</li>
+</ul>
+<h3 id="問20-l2">問20 [L2]</h3>
+<p>有形固定資産を売却し、その全額を長期借入金の返済に充てた。他の条件を一定とするとき、最も適切なものの組み合わせはどれか。 a　投資活動によるCFは増加する　b　財務活動によるCFは減少する　c　流動比率は上昇する　d　総資産は増加する</p>
+<ul>
+<li>ア　aとb
+</li>
+<li>イ　aとc
+</li>
+<li>ウ　bとd
+</li>
+<li>エ　cとd
+</li>
+</ul>
+<h3 id="問21-l2">問21 [L2]</h3>
+<p>当期末に長期借入を行い、その資金全額で固定資産を購入した。他の条件を一定とするとき、最も適切なものはどれか。</p>
+<ul>
+<li>ア　投資活動によるCFと財務活動によるCFは相殺され、どちらも変化しない
+</li>
+<li>イ　投資活動によるCFは減少し、財務活動によるCFは増加する
+</li>
+<li>ウ　自己資本比率は上昇する
+</li>
+<li>エ　流動比率は上昇する
+</li>
+</ul>
+<hr>
+<h2 id="5-fcf-企業価値-dcf-継続価値-マルチプル-頻度b">5. FCF→企業価値（DCF・継続価値・マルチプル) 〔頻度B〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：事業価値＝将来FCFの現在価値の合計。FCFが一定なら永久年金、定率成長ならゴードン型で割り引く（DCF法)。
+</li>
+<li><strong>手順</strong>：
+<ul>
+<li>FCF一定（成長なし)：<strong>事業価値＝FCF÷資本コスト(r)</strong>
+</li>
+<li>FCF定率成長：<strong>事業価値＝来期FCF÷(r−g)</strong>
+</li>
+<li>数年個別＋以降一定成長：個別期は複利現価、安定期は<strong>継続価値（＝その時点の翌期FCF÷(r−g))</strong>を出して現在へ割り引く
+</li>
+<li><strong>株主価値＝事業価値−有利子負債＋現金</strong>（無借金なら事業価値＝株主価値)
+</li>
+<li>マルチプル：<strong>株価＝EPS×PER</strong>、<strong>株価＝BPS×PBR</strong>
+</li>
+</ul>
+</li>
+<li><strong>罠</strong>：(1)ゴードンの分子は来期FCF（当期FCFなら×(1+g))。(2)継続価値は求めた後さらに現在へ割り引く。(3)無借金なら事業価値＝株主価値。
+</li>
+</ul>
+<h3 id="問22-l1">問22 [L1]</h3>
+<p>毎期一定のFCF 240万円が永久に続く。資本コスト8%。事業価値は。</p>
+<ul>
+<li>ア　3,000万円
+</li>
+<li>イ　1,920万円
+</li>
+<li>ウ　2,400万円
+</li>
+<li>エ　300万円
+</li>
+</ul>
+<h3 id="問23-l1">問23 [L1]</h3>
+<p>無借金企業で、毎期一定のFCF 450万円が永久に続く。資本コスト9%。株主価値は。</p>
+<ul>
+<li>ア　4,050万円
+</li>
+<li>イ　4,500万円
+</li>
+<li>ウ　5,000万円
+</li>
+<li>エ　500万円
+</li>
+</ul>
+<h3 id="問24-l1">問24 [L1]</h3>
+<p>来期のFCFが300万円、以降毎期3%で成長する。資本コスト8%。事業価値は。</p>
+<ul>
+<li>ア　3,750万円
+</li>
+<li>イ　10,000万円
+</li>
+<li>ウ　6,000万円
+</li>
+<li>エ　3,000万円
+</li>
+</ul>
+<h3 id="問25-l2">問25 [L2]</h3>
+<p>当期のFCFが500万円。来期以降、毎期4%で成長する。資本コスト9%。事業価値（当期末時点）は。</p>
+<ul>
+<li>ア　10,400万円
+</li>
+<li>イ　10,000万円
+</li>
+<li>ウ　12,500万円
+</li>
+<li>エ　13,000万円
+</li>
+</ul>
+<h3 id="問26-l2">問26 [L2]</h3>
+<p>無借金企業。次期のデータは税引後純利益800、減価償却費250、設備投資400、運転資本増加額50で、これらは毎年3%で成長する。株主の要求収益率8%。DCF法による株主価値は。</p>
+<ul>
+<li>ア　10,000万円
+</li>
+<li>イ　12,000万円
+</li>
+<li>ウ　15,000万円
+</li>
+<li>エ　7,500万円
+</li>
+</ul>
+<h3 id="問27-l2">問27 [L2]</h3>
+<p>第1〜3期のFCFは毎期末300の定額、第4期以降は毎期3%で成長。資本コスト8%、複利現価係数3年0.794。第4期以降のFCFの現時点（第1期期首)における現在価値は。</p>
+<ul>
+<li>ア　4,907万円
+</li>
+<li>イ　4,761万円
+</li>
+<li>ウ　6,180万円
+</li>
+<li>エ　5,400万円
+</li>
+</ul>
+<h3 id="問28-l2">問28 [L2]</h3>
+<p>事業価値が8,000万円、有利子負債が3,000万円、現金・預金が500万円の企業。株主価値は。</p>
+<ul>
+<li>ア　4,500万円
+</li>
+<li>イ　5,000万円
+</li>
+<li>ウ　11,000万円
+</li>
+<li>エ　5,500万円
+</li>
+</ul>
+<h3 id="問29-l1">問29 [L1]</h3>
+<p>ある企業の1株当たり当期純利益（EPS)が200円、同業他社の平均PER（株価収益率)が12倍。この企業の理論株価は。</p>
+<ul>
+<li>ア　1,200円
+</li>
+<li>イ　600円
+</li>
+<li>ウ　2,400円
+</li>
+<li>エ　12円
+</li>
+</ul>
+<h3 id="問30-l2">問30 [L2]</h3>
+<p>ある企業の1株当たり純資産（BPS)が1,500円、同業他社の平均PBR（株価純資産倍率)が1.6倍。この企業の理論株価は。</p>
+<ul>
+<li>ア　2,400円
+</li>
+<li>イ　937.5円
+</li>
+<li>ウ　960円
+</li>
+<li>エ　1.6円
+</li>
+</ul>
+<hr>
+<h1 id="解答-解説-手順をなぞる">解答・解説（手順をなぞる）</h1>
+<h2 id="1-間接法の調整">1. 間接法の調整</h2>
+<p><strong>問1：ア</strong>　減価償却は加算。500＋200＝<strong>700</strong>。</p>
+<p><strong>問2：イ</strong>　売上債権増（資産↑)は減算。500−80＝<strong>420</strong>。</p>
+<p><strong>問3：ウ</strong>　仕入債務増（負債↑)は加算。500＋60＝<strong>560</strong>。</p>
+<p><strong>問4：エ</strong>　棚卸資産の減少（資産↓)は加算。500＋50＝<strong>550</strong>。</p>
+<p><strong>問5：イ</strong>　600＋150（減価)−90（売上債権増)−40（棚卸増)＋70（仕入債務増)＝<strong>690</strong>。</p>
+<p><strong>問6：ウ</strong>　仕入債務の増加は加算。ア・イ（資産増)は減算、エ（減価減)は加算額が減る。</p>
+<h2 id="2-営業cfの通し計算">2. 営業CFの通し計算</h2>
+<p><strong>問7：ア</strong>　200＋40＋8（売上債権60→52で8減＝加算)−5（棚卸45→50で5増＝減算)＋7（仕入債務30→37で7増＝加算)＝<strong>250</strong>。</p>
+<p><strong>問8：イ</strong>　300＋80−15（売上債権15増)＋10（棚卸10減)−6（仕入債務6減)＝<strong>369</strong>。</p>
+<p><strong>問9：イ</strong>　160＋50−20−10＋15＝<strong>195</strong>。</p>
+<p><strong>問10：ウ</strong>　営業CF＝250＋70−30−20＋40＝310。FCF＝310−設備投資150＝<strong>160</strong>。</p>
+<h2 id="3-fcfの計算">3. FCFの計算</h2>
+<p><strong>問11：ア</strong>　800＋250−400−50＝<strong>600</strong>。</p>
+<p><strong>問12：イ</strong>　税引後営業利益＝500×0.7＝350。350＋200−300−50＝<strong>200</strong>。</p>
+<p><strong>問13：ア</strong>　運転資本増加＝60（売上債権)＋40（棚卸)−30（仕入債務)＝70。FCF＝400＋120−100−70＝<strong>350</strong>。</p>
+<p><strong>問14：イ</strong>　運転資本増加＝50＋(−30)−(−20)＝50−30＋20＝40。FCF＝600＋150−200−40＝<strong>510</strong>。仕入債務の減少は運転資本を増やす（＋20)。</p>
+<p><strong>問15：ア</strong>　税引後営業利益＝600×0.7＝420。運転資本増加＝40＋20−30＝30。FCF＝420＋180−250−30＝<strong>320</strong>。</p>
+<p><strong>問16：ウ</strong>　仕入債務増→運転資本減→FCF増。設備投資増・売上債権増はFCF減、減価償却減もFCF減。</p>
+<h2 id="4-cf増減-区分の判断">4. CF増減・区分の判断</h2>
+<p><strong>問17：ア</strong>　売掛金の減少＝回収＝現金増。イ・ウ・エはいずれも現金減。</p>
+<p><strong>問18：イ</strong>　有形固定資産の売却収入は投資活動。</p>
+<p><strong>問19：エ</strong>　支払配当金は財務活動（支払利息は営業・財務の選択)。</p>
+<p><strong>問20：ア</strong>　a：資産売却→投資CF増（○)。b：借入返済→財務CF減（○)。c：固定資産売却で得た現金を長期借入返済に充当→流動資産はネット不変→流動比率は不変（×)。d：固定資産が減るので総資産は減少（×)。よって<strong>aとb</strong>。</p>
+<p><strong>問21：イ</strong>　固定資産購入→投資CF減（支出)、借入→財務CF増（収入)。別区分なので相殺されない（ア×)。総資産増で自己資本比率は低下（ウ×)、流動項目は不変で流動比率も不変（エ×)。</p>
+<h2 id="5-fcf-企業価値">5. FCF→企業価値</h2>
+<p><strong>問22：ア</strong>　FCF一定→FCF÷r＝240÷0.08＝<strong>3,000</strong>。</p>
+<p><strong>問23：ウ</strong>　無借金なので株主価値＝事業価値＝450÷0.09＝<strong>5,000</strong>。</p>
+<p><strong>問24：ウ</strong>　定率成長→来期FCF÷(r−g)＝300÷(0.08−0.03)＝300÷0.05＝<strong>6,000</strong>。</p>
+<p><strong>問25：ア</strong>　当期FCFなので来期に成長：500×1.04＝520。520÷(0.09−0.04)＝520÷0.05＝<strong>10,400</strong>。当期500のまま割ると10,000（イ)になる罠。</p>
+<p><strong>問26：イ</strong>　FCF＝800＋250−400−50＝600。株主価値（無借金＝事業価値)＝600÷(0.08−0.03)＝600÷0.05＝<strong>12,000</strong>。</p>
+<p><strong>問27：ア</strong>　第4期FCF＝300×1.03＝309。継続価値（第3期末)＝309÷(0.08−0.03)＝309÷0.05＝6,180。現時点へ＝6,180×0.794＝<strong>4,907</strong>（四捨五入)。</p>
+<p><strong>問28：エ</strong>　株主価値＝事業価値−有利子負債＋現金＝8,000−3,000＋500＝<strong>5,500</strong>。</p>
+<p><strong>問29：ウ</strong>　株価＝EPS×PER＝200×12＝<strong>2,400</strong>。</p>
+<p><strong>問30：ア</strong>　株価＝BPS×PBR＝1,500×1.6＝<strong>2,400</strong>。</p>
+<hr>
+<h2 id="正解一覧">正解一覧</h2>
+<div class="table-wrap"><table><thead><tr><th>論点</th><th>問</th><th>解答</th></tr></thead><tbody><tr><td>間接法の調整</td><td>1–6</td><td>ア・イ・ウ・エ・イ・ウ</td></tr><tr><td>営業CF通し</td><td>7–10</td><td>ア・イ・イ・ウ</td></tr><tr><td>FCFの計算</td><td>11–16</td><td>ア・イ・ア・イ・ア・ウ</td></tr><tr><td>CF増減・区分</td><td>17–21</td><td>ア・イ・エ・ア・イ</td></tr><tr><td>FCF→企業価値</td><td>22–30</td><td>ア・ウ・ウ・ア・イ・ア・エ・ウ・ア</td></tr></tbody></table></div>
+<hr>
+<h2 id="使い方-共通部品の意識">使い方（共通部品の意識)</h2>
+<ol>
+<li><strong>核は1つ</strong>：<code>純利益 ＋減価償却 −売上債権増 −棚卸増 ＋仕入債務増 −設備投資</code>。営業CFはここまで、FCFは設備投資まで引く。
+</li>
+<li><strong>運転資本増加＝売上債権増＋棚卸増−仕入債務増</strong>を1セットで覚える（符号ミスが最大の失点源)。
+</li>
+<li><strong>企業価値はFCFを割り引くだけ</strong>：一定なら÷r、成長なら来期FCF÷(r−g)、多段階は継続価値→現在へ。
+</li>
+<li>この型はCF問題・企業価値問題・投資評価（税引後CF)で共通。<strong>1つ仕上げれば3論点に効く</strong>。
+</li>
+</ol>
+  </main>
+</body>
+</html>

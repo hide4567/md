@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Converted md</title>
+  <style>
+    :root {
+      --c-base: #ffffff;
+      --c-main: #000000;
+      --c-soft: rgba(0, 0, 0, 0.06);
+      --c-muted: rgba(0, 0, 0, 0.66);
+    }
+    * {
+      box-sizing: border-box;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    body {
+      margin: 0;
+      background: var(--c-base);
+      color: var(--c-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17.1px;
+      line-height: 1.75;
+    }
+    main {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+      padding: clamp(20px, 4vw, 48px) clamp(16px, 7vw, 96px);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 1.55em 0 0.35em;
+      padding-bottom: 0.12em;
+      font-size: clamp(1.267rem, 4.608vw, 2.65rem);
+    }
+    h1:first-child { margin-top: 0; }
+    h2 {
+      background: var(--c-main);
+      color: var(--c-base);
+      font-size: clamp(0.972rem, 2.16vw, 1.44rem);
+      margin: 1.8em 0 0.8em;
+      padding: 0.32em 0.55em;
+    }
+    h3 {
+      font-size: 1.215rem;
+      margin: 1.5em 0 0.35em;
+    }
+    p, ul, ol, blockquote, pre, table { margin: 0 0 1.05em; }
+    ul, ol { padding-left: 1.45em; }
+    li > ul,
+    li > ol {
+      margin: 0.35em 0 0.2em;
+    }
+    h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+    h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul,
+    h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol {
+      margin-top: 0;
+    }
+    a { color: var(--c-main); font-weight: 700; text-decoration-thickness: 0.08em; }
+    a:focus-visible { outline: 3px solid var(--c-main); outline-offset: 3px; }
+    strong { font-weight: 850; }
+    code {
+      border-radius: 6px;
+      background: var(--c-soft);
+      padding: 0.1em 0.35em;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    pre {
+      overflow: auto;
+      border-radius: 8px;
+      background: #000000;
+      color: #ffffff;
+      padding: 1rem;
+    }
+    pre code {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      background: var(--c-soft);
+      padding: 0.8rem 1rem;
+      color: var(--c-main);
+    }
+    .table-wrap { overflow-x: auto; margin: 0 0 1.3em; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--c-soft);
+      font-weight: 850;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--c-main);
+      margin: 2rem 0;
+    }
+    .color-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.36rem;
+      white-space: nowrap;
+    }
+    .color-chip::before {
+      content: "";
+      width: 0.9em;
+      height: 0.9em;
+      border: 1px solid rgba(0, 0, 0, 0.24);
+      background: var(--chip-color);
+    }
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+    @media print {
+      html,
+      body {
+        background: var(--c-base);
+      }
+      h2,
+      pre,
+      blockquote,
+      th,
+      code,
+      .color-chip::before {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+<h1 id="財務-会計-問題バンク">財務・会計 問題バンク</h1>
+<h2 id="バッチ1-ファイナンス計算-第1層コア-12問">バッチ1：ファイナンス計算（第1層コア・12問）</h2>
+<blockquote>頻度A＝毎年クラス／頻度B＝隔年〜数年に1回。各問4点。すべて自作・数値検算済み。</blockquote>
+<hr>
+<h3 id="問1-税引後cf-頻度a">問1〔税引後CF／頻度A〕</h3>
+<p>ある設備投資で年間の税引前キャッシュフローが3,000万円増加し、減価償却費は1,200万円である。実効税率30%のとき、年間の税引後キャッシュフローはいくらか。</p>
+<ul>
+<li>ア　2,100万円
+</li>
+<li>イ　2,460万円
+</li>
+<li>ウ　2,760万円
+</li>
+<li>エ　3,000万円
+</li>
+</ul>
+<h3 id="問2-npv-頻度a">問2〔NPV／頻度A〕</h3>
+<p>初期投資2,400万円、第1期末CF 1,200万円、第2期末CF 1,800万円、資本コスト5%。複利現価係数は1年0.95、2年0.91。この投資案のNPVは。</p>
+<ul>
+<li>ア　378万円
+</li>
+<li>イ　540万円
+</li>
+<li>ウ　600万円
+</li>
+<li>エ　−222万円
+</li>
+</ul>
+<h3 id="問3-npv総合-頻度a">問3〔NPV総合／頻度A〕</h3>
+<p>初期投資5,000万円、耐用年数5年・残存価額0・定額法。毎年の減価償却前の税引前営業CFが1,800万円。実効税率30%、資本コスト6%、5年の年金現価係数4.21。NPVは。</p>
+<ul>
+<li>ア　568万円
+</li>
+<li>イ　1,568万円
+</li>
+<li>ウ　2,568万円
+</li>
+<li>エ　1,000万円
+</li>
+</ul>
+<h3 id="問4-irr-vs-npv-頻度a">問4〔IRR vs NPV／頻度A〕</h3>
+<p>初期投資1,000万円、当期以降永続的に毎期末80万円のCFが得られる。資本コスト10%のとき、内部収益率法と正味現在価値法による採否の組み合わせは。</p>
+<ul>
+<li>ア　両方採択
+</li>
+<li>イ　IRR採択・NPV不採択
+</li>
+<li>ウ　IRR不採択・NPV採択
+</li>
+<li>エ　両方不採択
+</li>
+</ul>
+<h3 id="問5-npv-vs-収益性指数-頻度b">問5〔NPV vs 収益性指数／頻度B〕</h3>
+<p>相互排他的な設備A・B。A＝初期投資4,000万円・現金収支現在価値合計5,200万円。B＝初期投資5,000万円・同6,300万円。NPV法と収益性指数法でそれぞれ採択されるのは。</p>
+<ul>
+<li>ア　NPV:A／PI:B
+</li>
+<li>イ　NPV:B／PI:A
+</li>
+<li>ウ　NPV:B／PI:B
+</li>
+<li>エ　NPV:A／PI:A
+</li>
+</ul>
+<h3 id="問6-wacc-頻度a">問6〔WACC／頻度A〕</h3>
+<p>負債（時価)4,000万円、自己資本(時価)6,000万円。自己資本コスト12%、税引前負債コスト5%、実効税率30%。加重平均資本コストは。</p>
+<ul>
+<li>ア　7.2%
+</li>
+<li>イ　8.6%
+</li>
+<li>ウ　9.0%
+</li>
+<li>エ　10.2%
+</li>
+</ul>
+<h3 id="問7-wacc逆算-頻度b">問7〔WACC逆算／頻度B〕</h3>
+<p>税引前負債コスト5%、負債比率（負債÷自己資本)＝0.25、WACC＝8.7%、リスクフリーレート2%、実効税率30%。自己資本コストに含まれるリスクプレミアムは。</p>
+<ul>
+<li>ア　6.0%
+</li>
+<li>イ　7.0%
+</li>
+<li>ウ　8.0%
+</li>
+<li>エ　9.0%
+</li>
+</ul>
+<h3 id="問8-配当割引-定額-頻度a">問8〔配当割引・定額／頻度A〕</h3>
+<p>毎期一定の配当を支払う企業。1株当たり配当5円、株主の要求収益率8%。理論株価は。</p>
+<ul>
+<li>ア　40円
+</li>
+<li>イ　62.5円
+</li>
+<li>ウ　80円
+</li>
+<li>エ　100円
+</li>
+</ul>
+<h3 id="問9-配当割引-定率成長-頻度a">問9〔配当割引・定率成長／頻度A〕</h3>
+<p>次期(第1期末)の予想配当が1株6円、以降の配当成長率は毎期2%で一定。自己資本コスト8%。当期末時点の理論株価は。</p>
+<ul>
+<li>ア　75円
+</li>
+<li>イ　100円
+</li>
+<li>ウ　120円
+</li>
+<li>エ　150円
+</li>
+</ul>
+<h3 id="問10-サステナブル成長率-頻度a">問10〔サステナブル成長率／頻度A〕</h3>
+<p>ROE 8%、配当性向40%（いずれも毎期一定)。サステナブル成長率は。</p>
+<ul>
+<li>ア　3.2%
+</li>
+<li>イ　4.8%
+</li>
+<li>ウ　8.0%
+</li>
+<li>エ　12.0%
+</li>
+</ul>
+<h3 id="問11-サステナブル成長率-実数-頻度b">問11〔サステナブル成長率・実数／頻度B〕</h3>
+<p>当期純利益200万円、純資産1,000万円、配当80万円（純資産は期首値とする)。サステナブル成長率は。</p>
+<ul>
+<li>ア　7%
+</li>
+<li>イ　10%
+</li>
+<li>ウ　12%
+</li>
+<li>エ　14%
+</li>
+</ul>
+<h3 id="問12-継続価値-頻度b">問12〔継続価値／頻度B〕</h3>
+<p>第1〜3期のFCFは毎期末200百万円の定額、第4期以降のFCF成長率は毎期4%で一定。資本コスト8%、複利現価係数3年0.794。第4期以降のFCFの現時点(第1期期首)における現在価値は。</p>
+<ul>
+<li>ア　3,675百万円
+</li>
+<li>イ　3,970百万円
+</li>
+<li>ウ　4,129百万円
+</li>
+<li>エ　4,420百万円
+</li>
+</ul>
+<hr>
+<h2 id="解答-解説">解答・解説</h2>
+<p><strong>問1：イ</strong> 税引後CF＝税引前×(1−t)＋減価×t＝3,000×0.7＋1,200×0.3＝2,100＋360＝<strong>2,460</strong>。</p>
+<p><strong>問2：ア</strong> −2,400＋1,200×0.95＋1,800×0.91＝−2,400＋1,140＋1,638＝<strong>378</strong>。</p>
+<p><strong>問3：イ</strong> 減価＝5,000÷5＝1,000。税引後CF＝1,800×0.7＋1,000×0.3＝1,560。NPV＝−5,000＋1,560×4.21＝1,567.6≒<strong>1,568</strong>。</p>
+<p><strong>問4：エ</strong> 永続CFのIRR＝80÷1,000＝8%＜10%→棄却。NPV＝80÷0.10−1,000＝−200＜0→棄却。両方不採択。</p>
+<p><strong>問5：イ</strong> A：NPV＝1,200、PI＝5,200/4,000＝1.30。B：NPV＝1,300、PI＝6,300/5,000＝1.26。NPV法はB、PI法はA。相互排他的だと両者は食い違いうる（典型論点)。</p>
+<p><strong>問6：イ</strong> 0.6×12＋0.4×5×0.7＝7.2＋1.4＝<strong>8.6</strong>。</p>
+<p><strong>問7：ウ</strong> 罠は比率→ウェイト変換。D/E＝0.25は「負債:自己資本＝1:4」なので負債ウェイト0.2・自己資本0.8（0.25ではない)。re＝(8.7−0.2×5×0.7)÷0.8＝(8.7−0.7)÷0.8＝<strong>10%</strong>。RP＝10−2＝<strong>8%</strong>。</p>
+<p><strong>問8：イ</strong> 成長なしの株価＝配当÷r＝5÷0.08＝<strong>62.5</strong>。</p>
+<p><strong>問9：イ</strong> 定率成長（ゴードン)：P₀＝D₁÷(r−g)＝6÷(0.08−0.02)＝6÷0.06＝<strong>100</strong>。</p>
+<p><strong>問10：イ</strong> g＝ROE×内部留保率＝8%×(1−0.4)＝<strong>4.8%</strong>。</p>
+<p><strong>問11：ウ</strong> 内部留保額＝200−80＝120。g＝120÷1,000＝<strong>12%</strong>。</p>
+<p><strong>問12：ウ</strong> 第4期FCF＝200×1.04＝208。継続価値(第3期末)＝208÷(0.08−0.04)＝5,200。現時点へ＝5,200×0.794＝4,128.8≒<strong>4,129</strong>。</p>
+<hr>
+<h3 id="正解一覧">正解一覧</h3>
+<div class="table-wrap"><table><thead><tr><th>問</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr></thead><tbody><tr><td>解答</td><td>イ</td><td>ア</td><td>イ</td><td>エ</td><td>イ</td><td>イ</td><td>ウ</td><td>イ</td><td>イ</td><td>イ</td><td>ウ</td><td>ウ</td></tr></tbody></table></div>
+  </main>
+</body>
+</html>

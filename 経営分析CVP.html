@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Converted md</title>
+  <style>
+    :root {
+      --c-base: #ffffff;
+      --c-main: #000000;
+      --c-soft: rgba(0, 0, 0, 0.06);
+      --c-muted: rgba(0, 0, 0, 0.66);
+    }
+    * {
+      box-sizing: border-box;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    body {
+      margin: 0;
+      background: var(--c-base);
+      color: var(--c-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17.1px;
+      line-height: 1.75;
+    }
+    main {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+      padding: clamp(20px, 4vw, 48px) clamp(16px, 7vw, 96px);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 1.55em 0 0.35em;
+      padding-bottom: 0.12em;
+      font-size: clamp(1.267rem, 4.608vw, 2.65rem);
+    }
+    h1:first-child { margin-top: 0; }
+    h2 {
+      background: var(--c-main);
+      color: var(--c-base);
+      font-size: clamp(0.972rem, 2.16vw, 1.44rem);
+      margin: 1.8em 0 0.8em;
+      padding: 0.32em 0.55em;
+    }
+    h3 {
+      font-size: 1.215rem;
+      margin: 1.5em 0 0.35em;
+    }
+    p, ul, ol, blockquote, pre, table { margin: 0 0 1.05em; }
+    ul, ol { padding-left: 1.45em; }
+    li > ul,
+    li > ol {
+      margin: 0.35em 0 0.2em;
+    }
+    h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+    h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul,
+    h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol {
+      margin-top: 0;
+    }
+    a { color: var(--c-main); font-weight: 700; text-decoration-thickness: 0.08em; }
+    a:focus-visible { outline: 3px solid var(--c-main); outline-offset: 3px; }
+    strong { font-weight: 850; }
+    code {
+      border-radius: 6px;
+      background: var(--c-soft);
+      padding: 0.1em 0.35em;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    pre {
+      overflow: auto;
+      border-radius: 8px;
+      background: #000000;
+      color: #ffffff;
+      padding: 1rem;
+    }
+    pre code {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      background: var(--c-soft);
+      padding: 0.8rem 1rem;
+      color: var(--c-main);
+    }
+    .table-wrap { overflow-x: auto; margin: 0 0 1.3em; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--c-soft);
+      font-weight: 850;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--c-main);
+      margin: 2rem 0;
+    }
+    .color-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.36rem;
+      white-space: nowrap;
+    }
+    .color-chip::before {
+      content: "";
+      width: 0.9em;
+      height: 0.9em;
+      border: 1px solid rgba(0, 0, 0, 0.24);
+      background: var(--chip-color);
+    }
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+    @media print {
+      html,
+      body {
+        background: var(--c-base);
+      }
+      h2,
+      pre,
+      blockquote,
+      th,
+      code,
+      .color-chip::before {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+<h1 id="財務-会計-問題バンク">財務・会計 問題バンク</h1>
+<h2 id="バッチ4-経営分析-cvp-l1-l2-回答方法の定着版-22問">バッチ4：経営分析・CVP（L1–L2／回答方法の定着版・22問）</h2>
+<blockquote>各論点は <strong>解き方の型（なぜ→手順→罠)</strong> → <strong>L1（素直)</strong> → <strong>L2（罠込み)</strong> の順。</blockquote>
+<blockquote>解説は毎回その手順をなぞります。各問4点。</blockquote>
+<hr>
+<h2 id="1-収益性とroaの分解-頻度a">1. 収益性とROAの分解 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：ROA（総資本利益率）は「総資本がどれだけ利益を生んだか」。これは「売上1円あたりの利益（マージン)」×「総資本が何回売上に化けたか（回転)」に分解できる。儲け方が薄利多売か厚利少売かが見える。
+</li>
+<li><strong>手順</strong>：①ROA＝利益÷総資本　②分解＝（利益÷売上)×(売上÷総資本)＝売上高利益率×総資本回転率
+</li>
+<li><strong>罠</strong>：分子の利益と分母の資本の対応を合わせる（事業利益なら経営資本、というように混ぜない)。回転率は「回」、回転期間は「日／月」で逆数関係。
+</li>
+</ul>
+<h3 id="問1-l1">問1 [L1]</h3>
+<p>売上高2,000万円、営業利益160万円、総資本800万円。総資本営業利益率（ROA）は。</p>
+<ul>
+<li>ア　8%
+</li>
+<li>イ　20%
+</li>
+<li>ウ　25%
+</li>
+<li>エ　80%
+</li>
+</ul>
+<h3 id="問2-l1">問2 [L1]</h3>
+<p>売上高5,000万円、当期純利益250万円、総資本2,500万円。ROAを「売上高純利益率×総資本回転率」に分解したときの各値は。</p>
+<ul>
+<li>ア　利益率5%・回転率2回
+</li>
+<li>イ　利益率10%・回転率2回
+</li>
+<li>ウ　利益率5%・回転率0.5回
+</li>
+<li>エ　利益率10%・回転率0.5回
+</li>
+</ul>
+<h3 id="問3-l2">問3 [L2]</h3>
+<p>A社・B社ともに総資本営業利益率（ROA）は12%。A社の売上高営業利益率は6%、B社は3%である。総資本回転率が高いのはどちらで、その値は。</p>
+<ul>
+<li>ア　A社・2回
+</li>
+<li>イ　B社・2回
+</li>
+<li>ウ　A社・4回
+</li>
+<li>エ　B社・4回
+</li>
+</ul>
+<hr>
+<h2 id="2-roe-dupont分解-財務レバレッジ-頻度a">2. ROE・DuPont分解・財務レバレッジ 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：ROEは株主の儲け効率。DuPontは「本業の効率（ROA＝利益率×回転率)」に「借金のテコ（財務レバレッジ)」を掛けたもの。借金で自己資本を薄くすると同じ本業利益でも株主の取り分率は上がる──<strong>ただしROAが負債利子率を上回るときだけ</strong>。
+</li>
+<li><strong>手順</strong>：①ROE＝当期純利益÷自己資本　②DuPont＝売上高純利益率×総資本回転率×財務レバレッジ（財務レバレッジ＝総資本÷自己資本＝1÷自己資本比率)　③レバレッジ効果＝<code>ROA＋(ROA−i)×(負債÷自己資本)</code>
+</li>
+<li><strong>罠</strong>：(1)DuPontは掛け算なので、利益率が下がっても回転率やレバレッジ上昇で相殺され、ROEの方向は一概に言えない。(2)レバレッジが効くのは<strong>ROA＞i のときだけ</strong>。ROA＜i なら借金は逆効果。
+</li>
+</ul>
+<h3 id="問4-l1">問4 [L1]</h3>
+<p>当期純利益300万円、自己資本1,500万円。ROEは。</p>
+<ul>
+<li>ア　15%
+</li>
+<li>イ　20%
+</li>
+<li>ウ　25%
+</li>
+<li>エ　30%
+</li>
+</ul>
+<h3 id="問5-l1">問5 [L1]</h3>
+<p>売上高純利益率4%、総資本回転率1.5回、自己資本比率40%。DuPont分解によるROEは。</p>
+<ul>
+<li>ア　6%
+</li>
+<li>イ　10%
+</li>
+<li>ウ　15%
+</li>
+<li>エ　24%
+</li>
+</ul>
+<h3 id="問6-l2">問6 [L2]</h3>
+<p>総資本2,000万円を全額自己資本で調達しており、総資本営業利益率（事業利益率）は12%。今後、負債と自己資本を1:1（各1,000万円）に変える。負債利子率4%、税金は存在しないものとする。変更後のROEは。</p>
+<ul>
+<li>ア　16%
+</li>
+<li>イ　18%
+</li>
+<li>ウ　20%
+</li>
+<li>エ　24%
+</li>
+</ul>
+<h3 id="問7-l2">問7 [L2]</h3>
+<p>総資本利益率（ROA）が5%の企業が、負債利子率8%の借入を増やして負債比率を高めた。他の条件を一定とするとき、ROEはどうなるか。</p>
+<ul>
+<li>ア　上昇する
+</li>
+<li>イ　低下する
+</li>
+<li>ウ　変化しない
+</li>
+<li>エ　負債比率だけでは判断できない
+</li>
+</ul>
+<hr>
+<h2 id="3-安全性指標-頻度a">3. 安全性指標 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：倒れないか（安全性）は短期と長期で見る。短期は1年内に返す負債を払える資産があるか（流動比率・当座比率)。長期は返さなくてよい金（自己資本＋固定負債）で固定資産を賄えているか（固定比率・固定長期適合率)。
+</li>
+<li><strong>手順</strong>：定義どおり計算。分母（比べる相手）が何かを意識する。
+</li>
+<li><strong>罠</strong>：(1)当座資産は<strong>棚卸資産を除く</strong>（換金が遅い)。(2)固定比率の分母は自己資本のみ、固定長期適合率の分母は自己資本＋固定負債。(3)<strong>固定比率が100%超でも、固定長期適合率が100%以下なら直ちに危険ではない</strong>。(4)インタレストカバレッジの分子は営業利益＋受取利息・配当金。
+</li>
+</ul>
+<h3 id="問8-l1">問8 [L1]</h3>
+<p>流動資産は現金預金200・売上債権300・棚卸資産100（計600万円)、流動負債400万円。流動比率と当座比率は。</p>
+<ul>
+<li>ア　流動150%・当座125%
+</li>
+<li>イ　流動150%・当座150%
+</li>
+<li>ウ　流動125%・当座150%
+</li>
+<li>エ　流動100%・当座125%
+</li>
+</ul>
+<h3 id="問9-l1">問9 [L1]</h3>
+<p>総資本5,000万円、負債3,000万円、自己資本2,000万円。自己資本比率は。</p>
+<ul>
+<li>ア　20%
+</li>
+<li>イ　40%
+</li>
+<li>ウ　60%
+</li>
+<li>エ　150%
+</li>
+</ul>
+<h3 id="問10-l2">問10 [L2]</h3>
+<p>固定資産1,200万円、自己資本1,000万円、固定負債500万円。固定比率と固定長期適合率は。</p>
+<ul>
+<li>ア　固定比率120%・固定長期適合率80%
+</li>
+<li>イ　ともに120%
+</li>
+<li>ウ　固定比率80%・固定長期適合率120%
+</li>
+<li>エ　ともに80%
+</li>
+</ul>
+<h3 id="問11-l2">問11 [L2]</h3>
+<p>営業利益800万円、受取利息・配当金100万円、支払利息200万円。インタレスト・カバレッジ・レシオは。</p>
+<ul>
+<li>ア　4倍
+</li>
+<li>イ　4.5倍
+</li>
+<li>ウ　5倍
+</li>
+<li>エ　9倍
+</li>
+</ul>
+<hr>
+<h2 id="4-回転率-回転期間-ccc-頻度a">4. 回転率・回転期間・CCC 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：回転率は「資産が1年で何回売上に化けたか」。回転期間はその逆（1回転に何日)。CCC（キャッシュ・コンバージョン・サイクル）は「現金を払ってから回収するまでの空白期間」＝この間は運転資金が寝る。
+</li>
+<li><strong>手順</strong>：①回転率＝売上÷資産（回)　②回転期間＝資産÷売上×日数（＝365÷回転率)　③<code>CCC＝売上債権回転期間＋棚卸資産回転期間−仕入債務回転期間</code>
+</li>
+<li><strong>罠</strong>：(1)回転率と回転期間は逆数（回転率↑＝回転期間↓＝良い)。(2)CCCは仕入債務回転期間を<strong>引く</strong>（支払を遅らせるほどCCC短縮＝良い)。(3)CCCはマイナスにもなりうる。
+</li>
+</ul>
+<h3 id="問12-l1">問12 [L1]</h3>
+<p>売上高7,300万円、売上債権1,000万円（1年＝365日)。売上債権回転期間は。</p>
+<ul>
+<li>ア　36.5日
+</li>
+<li>イ　50日
+</li>
+<li>ウ　73日
+</li>
+<li>エ　146日
+</li>
+</ul>
+<h3 id="問13-l1">問13 [L1]</h3>
+<p>売上高6,000万円、棚卸資産500万円。棚卸資産回転率（売上高ベース）は。</p>
+<ul>
+<li>ア　6回
+</li>
+<li>イ　12回
+</li>
+<li>ウ　0.083回
+</li>
+<li>エ　120回
+</li>
+</ul>
+<h3 id="問14-l2">問14 [L2]</h3>
+<p>売上債権回転期間60日、棚卸資産回転期間40日、仕入債務回転期間30日。キャッシュ・コンバージョン・サイクル（CCC）は。</p>
+<ul>
+<li>ア　130日
+</li>
+<li>イ　70日
+</li>
+<li>ウ　50日
+</li>
+<li>エ　10日
+</li>
+</ul>
+<hr>
+<h2 id="5-損益分岐点-cvp-頻度a">5. 損益分岐点（CVP) 〔頻度A〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：固定費は売上に関係なくかかる。これを賄うには売上1円あたり残る「限界利益（売上−変動費)」を積み上げるしかない。だから損益分岐点売上＝<strong>固定費を限界利益率で割り戻す</strong>。
+</li>
+<li><strong>手順</strong>：①限界利益率＝1−変動費率（または限界利益÷売上)　②<code>損益分岐点売上＝固定費÷限界利益率</code>　③目標利益込みは分子に目標利益を足す＝<code>(固定費＋目標利益)÷限界利益率</code>
+</li>
+<li><strong>罠</strong>：(1)割るのは限界利益率（変動費率ではない)。(2)安全余裕率と損益分岐点比率は足して1（逆の関係)。(3)損益分岐点比率は低いほど安全。
+</li>
+</ul>
+<h3 id="問15-l1">問15 [L1]</h3>
+<p>売上高3,000万円、変動費1,800万円、固定費720万円。損益分岐点売上高は。</p>
+<ul>
+<li>ア　1,200万円
+</li>
+<li>イ　1,800万円
+</li>
+<li>ウ　2,520万円
+</li>
+<li>エ　3,000万円
+</li>
+</ul>
+<h3 id="問16-l1">問16 [L1]</h3>
+<p>変動費率60%、固定費800万円。目標営業利益400万円を達成する売上高は。</p>
+<ul>
+<li>ア　2,000万円
+</li>
+<li>イ　3,000万円
+</li>
+<li>ウ　3,333万円
+</li>
+<li>エ　1,200万円
+</li>
+</ul>
+<h3 id="問17-l2">問17 [L2]</h3>
+<p>実際売上高5,000万円、損益分岐点売上高4,000万円。安全余裕率と損益分岐点比率は。</p>
+<ul>
+<li>ア　安全余裕率20%・損益分岐点比率80%
+</li>
+<li>イ　ともに20%
+</li>
+<li>ウ　安全余裕率80%・損益分岐点比率20%
+</li>
+<li>エ　ともに80%
+</li>
+</ul>
+<h3 id="問18-l2">問18 [L2]</h3>
+<p>固定費600万円、変動費率70%。損益分岐点売上高は。</p>
+<ul>
+<li>ア　857万円
+</li>
+<li>イ　2,000万円
+</li>
+<li>ウ　600万円
+</li>
+<li>エ　200万円
+</li>
+</ul>
+<hr>
+<h2 id="6-営業レバレッジ-頻度b">6. 営業レバレッジ 〔頻度B〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：固定費が大きいほど、売上が動いたとき営業利益が大きく振れる（固定費は売上が増えても増えないので、増えた限界利益がそのまま利益に乗る)。このテコの強さが営業レバレッジ。
+</li>
+<li><strong>手順</strong>：<code>営業レバレッジ＝限界利益÷営業利益</code>。これは「売上1%の変化が営業利益を何%動かすか」。
+</li>
+<li><strong>罠</strong>：(1)営業レバレッジが<strong>高い＝固定費比率が高い＝売上減で利益が大きく減る（リスク大)</strong>。低いほうが売上減に強い。(2)固定費を増やし変動費を減らすと営業レバレッジは上がる。(3)一般に製造業（固定費大）＞小売業（変動費大)。
+</li>
+</ul>
+<h3 id="問19-l1">問19 [L1]</h3>
+<p>売上高2,000万円、変動費1,200万円、固定費500万円（営業利益300万円)。営業レバレッジは。</p>
+<ul>
+<li>ア　1.67
+</li>
+<li>イ　2.67
+</li>
+<li>ウ　4.0
+</li>
+<li>エ　0.375
+</li>
+</ul>
+<h3 id="問20-l2">問20 [L2]</h3>
+<p>営業レバレッジが高い企業の特徴として、最も適切なものはどれか。</p>
+<ul>
+<li>ア　売上が減少しても営業利益が減少しにくい
+</li>
+<li>イ　固定費の割合が高く、売上の変動が営業利益を大きく変動させる
+</li>
+<li>ウ　一般に製造業よりも小売業の方が高い
+</li>
+<li>エ　変動費を増やし固定費を減らすほど高くなる
+</li>
+</ul>
+<hr>
+<h2 id="7-生産性-頻度b">7. 生産性 〔頻度B〕</h2>
+<p><strong>解き方の型</strong></p>
+<ul>
+<li><strong>なぜ</strong>：労働生産性は「従業員1人がどれだけ付加価値を生んだか」。これは「設備が生む付加価値（設備生産性)」×「1人当たりの設備（労働装備率)」に分解できる──人は設備を使って価値を生むから。
+</li>
+<li><strong>手順</strong>：①労働生産性＝付加価値÷従業員数　②分解＝設備生産性×労働装備率（＝付加価値÷有形固定資産 × 有形固定資産÷従業員数)
+</li>
+<li><strong>罠</strong>：労働生産性が高い理由が「設備効率（設備生産性)」か「設備の充実（労働装備率)」かを分解で見分ける。
+</li>
+</ul>
+<h3 id="問21-l1">問21 [L1]</h3>
+<p>付加価値1億2,000万円、従業員数40人。労働生産性は。</p>
+<ul>
+<li>ア　200万円／人
+</li>
+<li>イ　300万円／人
+</li>
+<li>ウ　400万円／人
+</li>
+<li>エ　480万円／人
+</li>
+</ul>
+<h3 id="問22-l2">問22 [L2]</h3>
+<p>付加価値2,400万円、有形固定資産1,600万円、従業員数20人。労働生産性を「設備生産性×労働装備率」に分解したときの各値は。</p>
+<ul>
+<li>ア　設備生産性1.5・労働装備率80万円／人
+</li>
+<li>イ　設備生産性0.67・労働装備率80万円／人
+</li>
+<li>ウ　設備生産性1.5・労働装備率120万円／人
+</li>
+<li>エ　設備生産性80・労働装備率1.5
+</li>
+</ul>
+<hr>
+<h1 id="解答-解説-手順をなぞる">解答・解説（手順をなぞる）</h1>
+<h2 id="1-収益性とroaの分解">1. 収益性とROAの分解</h2>
+<p><strong>問1：イ</strong>　①ROA＝利益÷総資本＝160÷800＝<strong>20%</strong>。</p>
+<p><strong>問2：ア</strong>　②分解＝（250÷5,000)×(5,000÷2,500)＝利益率<strong>5%</strong>×回転率<strong>2回</strong>。</p>
+<p><strong>問3：エ</strong>　ROA＝利益率×回転率。A：12%＝6%×回転率→2回。B：12%＝3%×回転率→<strong>4回</strong>。同じROAでマージンが低いB社は回転で稼いでいる。</p>
+<h2 id="2-roe-dupont-財務レバレッジ">2. ROE・DuPont・財務レバレッジ</h2>
+<p><strong>問4：イ</strong>　①ROE＝300÷1,500＝<strong>20%</strong>。</p>
+<p><strong>問5：ウ</strong>　②財務レバレッジ＝1÷0.4＝2.5。ROE＝4%×1.5×2.5＝<strong>15%</strong>。</p>
+<p><strong>問6：ウ</strong>　③<code>ROA＋(ROA−i)×D/E</code>＝12%＋(12%−4%)×1＝<strong>20%</strong>。検算：営業利益＝2,000×12%＝240、利子＝1,000×4%＝40、税引後＝200、ROE＝200÷1,000＝20%。</p>
+<p><strong>問7：イ</strong>　ROA（5%）＜負債利子率（8%）。レバレッジは逆効果なのでROEは<strong>低下</strong>。借金が効くのはROA＞iのときだけ。</p>
+<h2 id="3-安全性指標">3. 安全性指標</h2>
+<p><strong>問8：ア</strong>　流動比率＝600÷400＝150%。当座資産は棚卸資産を除き200＋300＝500。当座比率＝500÷400＝<strong>125%</strong>。</p>
+<p><strong>問9：イ</strong>　自己資本比率＝2,000÷5,000＝<strong>40%</strong>。</p>
+<p><strong>問10：ア</strong>　固定比率＝1,200÷1,000＝120%。固定長期適合率＝1,200÷(1,000＋500)＝1,200÷1,500＝80%。<strong>固定比率は100%超だが固定長期適合率は80%なので直ちに危険ではない</strong>（固定負債も固定資産を支えている)。</p>
+<p><strong>問11：イ</strong>　分子は営業利益＋受取利息・配当金＝800＋100＝900。900÷200＝<strong>4.5倍</strong>。受取利息を足し忘れると4倍（ア)。</p>
+<h2 id="4-回転率-回転期間-ccc">4. 回転率・回転期間・CCC</h2>
+<p><strong>問12：イ</strong>　回転率＝7,300÷1,000＝7.3回。回転期間＝365÷7.3＝<strong>50日</strong>（＝1,000÷7,300×365)。</p>
+<p><strong>問13：イ</strong>　①回転率＝6,000÷500＝<strong>12回</strong>。</p>
+<p><strong>問14：イ</strong>　③CCC＝60＋40−30＝<strong>70日</strong>。仕入債務回転期間は引く。全部足すと130日（ア）になる罠。</p>
+<h2 id="5-損益分岐点-cvp">5. 損益分岐点（CVP)</h2>
+<p><strong>問15：イ</strong>　①限界利益率＝(3,000−1,800)÷3,000＝40%。②損益分岐点売上＝720÷0.4＝<strong>1,800万円</strong>。</p>
+<p><strong>問16：イ</strong>　①限界利益率＝1−0.6＝40%。③(800＋400)÷0.4＝<strong>3,000万円</strong>。</p>
+<p><strong>問17：ア</strong>　安全余裕率＝(5,000−4,000)÷5,000＝20%。損益分岐点比率＝4,000÷5,000＝80%。両者は足して1。</p>
+<p><strong>問18：イ</strong>　①限界利益率＝1−0.7＝30%。②600÷0.3＝<strong>2,000万円</strong>。変動費率0.7で割ると857万円（ア)になる罠。</p>
+<h2 id="6-営業レバレッジ">6. 営業レバレッジ</h2>
+<p><strong>問19：イ</strong>　限界利益＝2,000−1,200＝800。営業レバレッジ＝800÷300≒<strong>2.67</strong>。</p>
+<p><strong>問20：イ</strong>　高い営業レバレッジ＝固定費比率が高く、売上変動が営業利益を大きく振らす。アは逆（高いほど減りやすい)、ウも逆（製造業で高い)、エも逆（固定費増・変動費減で高くなる)。</p>
+<h2 id="7-生産性">7. 生産性</h2>
+<p><strong>問21：イ</strong>　①労働生産性＝12,000万÷40人＝<strong>300万円／人</strong>。</p>
+<p><strong>問22：ア</strong>　②設備生産性＝2,400÷1,600＝<strong>1.5</strong>、労働装備率＝1,600÷20＝<strong>80万円／人</strong>。積＝1.5×80＝120万円／人（＝2,400÷20で検算一致)。</p>
+<hr>
+<h2 id="正解一覧">正解一覧</h2>
+<div class="table-wrap"><table><thead><tr><th>論点</th><th>問</th><th>解答</th></tr></thead><tbody><tr><td>収益性・ROA分解</td><td>1–3</td><td>イ・ア・エ</td></tr><tr><td>ROE・DuPont・レバレッジ</td><td>4–7</td><td>イ・ウ・ウ・イ</td></tr><tr><td>安全性</td><td>8–11</td><td>ア・イ・ア・イ</td></tr><tr><td>回転率・CCC</td><td>12–14</td><td>イ・イ・イ</td></tr><tr><td>損益分岐点</td><td>15–18</td><td>イ・イ・ア・イ</td></tr><tr><td>営業レバレッジ</td><td>19–20</td><td>イ・イ</td></tr><tr><td>生産性</td><td>21–22</td><td>イ・ア</td></tr></tbody></table></div>
+<p>※解き方の使い方（型を声に出す→手順を指でなぞる→外した手順を特定→2周目はL2だけ）はバッチ3末尾と同じ。</p>
+  </main>
+</body>
+</html>
